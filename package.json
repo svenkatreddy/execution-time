@@ -1,0 +1,27 @@
+{
+  "name": "execution-time",
+  "version": "1.0.0",
+  "description": "ultility to measure execution time",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svenkatreddy/execution-time.git"
+  },
+  "keywords": [
+    "hrtime",
+    "execution",
+    "time",
+    "performance",
+    "perf",
+    "speed"
+  ],
+  "author": "Venkat Reddy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svenkatreddy/execution-time/issues"
+  },
+  "homepage": "https://github.com/svenkatreddy/execution-time#readme"
+}
