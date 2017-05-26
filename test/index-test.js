@@ -21,7 +21,19 @@ describe('index.js', () => {
     it('should return log time', (done) => {
       executionTime.start();  
       setTimeout(function() { 
-          expect(executionTime.stop()).to.be.above(1000);
+          expect(executionTime.stop().time).to.be.above(1000);
+          done();
+      }, 1000);
+    });
+    
+    it('should return words', (done) => {
+      executionTime.start();  
+      setTimeout(function() {
+          const result = executionTime.stop();
+          expect(result.time).to.be.ok();
+          expect(result.words).to.be.ok();
+          expect(result.preciseWords).to.be.ok();
+          expect(result.verboseWords).to.be.ok();
           done();
       }, 1000);
     });
