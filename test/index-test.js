@@ -3,7 +3,7 @@ const expect = chai.expect;
 const sinon = require('sinon');
 const logstub = sinon.stub();
 
-const executionTime = require('../')(logstub);
+const executionTime = require('../')(console.log);
 
 describe('index.js', () => {
   context('when execution time is used', () => {

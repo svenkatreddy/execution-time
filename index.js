@@ -14,9 +14,11 @@ const performance = (logInstance) => {
       const words = prettyHrtime(diff);
       const preciseWords = prettyHrtime(diff, {precise:true});
       const verboseWords = prettyHrtime(diff, {verbose:true});
-      if(logInstance) {
+      if (logInstance) {
+        logInstance('Total Time:')  
         logInstance(time);
       }
+      
       return { 
         time: time,
         words: words,
