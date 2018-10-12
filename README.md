@@ -23,6 +23,19 @@ const results = perf.stop();
 console.log(results.time);  // in milliseconds
 ```
 
+### Named performance measurer
+```
+const perf = require('execution-time')();
+
+//at beginning of your code, pass any name
+perf.start('apiCall');
+
+//at end of your code, pass the same name (anywhere in your flow)
+const results = perf.stop('apiCall');
+console.log(results.time);  // in milliseconds
+
+```
+
 ### if you dont care about results but just want to print results
 
 sample usage with debug

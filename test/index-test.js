@@ -26,8 +26,17 @@ describe('index.js', () => {
       }, 1000);
     });
     
+    it('should return log time for a named', (done) => {
+      executionTime.start("venkat");  
+      setTimeout(function() { 
+          expect(executionTime.stop("venkat").time).to.be.above(1200);
+          done();
+      }, 1200);
+    });
+    
     it('should return words', (done) => {
-      executionTime.start();  
+      executionTime.start(); 
+      executionTime.start('venkat');
       setTimeout(function() {
           const result = executionTime.stop();
           expect(result.time).to.be.ok();
@@ -36,6 +45,14 @@ describe('index.js', () => {
           expect(result.verboseWords).to.be.ok();
           done();
       }, 1000);
+      setTimeout(function() {
+          const result = executionTime.stop('venkat');
+          expect(result.time).to.be.ok();
+          expect(result.words).to.be.ok();
+          expect(result.preciseWords).to.be.ok();
+          expect(result.verboseWords).to.be.ok();
+          done();
+      }, 1200);
     });
     
   });
