@@ -33,6 +33,8 @@ perf.start('apiCall');
 //at end of your code, pass the same name (anywhere in your flow)
 const results = perf.stop('apiCall');
 console.log(results.time);  // in milliseconds
+console.log(results.preciseWords);  // in words
+
 
 ```
 
