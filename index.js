@@ -26,7 +26,8 @@ const performance = (logInstance) => {
         logInstance('Total Time:' + time);
       }
       
-      return { 
+      return {
+        name: name,
         time: time,
         words: words,
         preciseWords: preciseWords,
