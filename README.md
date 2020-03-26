@@ -7,30 +7,30 @@
 node.js utility to measure execution time in code
 
 ## Install
-```
+```shell
 npm install execution-time --save
 ```
 
 ## Usage
-```
+```js
 const perf = require('execution-time')();
 
-//at beginning of your code
+// At beginning of your code
 perf.start();
 
-//at end of your code
+// At end of your code
 const results = perf.stop();
 console.log(results.time);  // in milliseconds
 ```
 
 ### Named performance measurer
-```
+```js
 const perf = require('execution-time')();
 
-//at beginning of your code, pass any name
+// At beginning of your code, pass any name
 perf.start('apiCall');
 
-//at end of your code, pass the same name (anywhere in your flow)
+// At end of your code, pass the same name (anywhere in your flow)
 const results = perf.stop('apiCall');
 console.log(results.time);  // in milliseconds
 console.log(results.preciseWords);  // in words
@@ -38,30 +38,30 @@ console.log(results.preciseWords);  // in words
 
 ```
 
-### if you dont care about results but just want to print results
+### If you dont care about results but just want to print results
 
-sample usage with debug
-```
+Sample usage with debug
+```js
 const debug = require('debug')('your-module');
 const perf = require('execution-time')(debug);
 
-//at beginning of your code
+// At beginning of your code
 perf.start();
 
-//at end of your code
+// At end of your code
 perf.stop();
 
 ```
 
 also works with console.log/info/warn
 
-```
+```js
 const perf = require('execution-time')(console.log);
 
-//at beginning of your code
+// At beginning of your code
 perf.start();
 
-//at end of your code
+// At end of your code
 perf.stop();
 
 ```
