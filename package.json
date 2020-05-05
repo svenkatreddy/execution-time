@@ -2,16 +2,20 @@
   "name": "execution-time",
   "version": "2.0.0",
   "description": "ultility to measure execution time",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "ava",
     "build": "tsc",
-    "prepare": "npm run build"
+    "build:types": "tsc -d --declarationDir dist --declarationMap --emitDeclarationOnly",
+    "prepare": "npm run build && npm run build:types"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/svenkatreddy/execution-time.git"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "hrtime",
     "execution",
