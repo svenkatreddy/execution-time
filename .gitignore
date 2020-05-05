@@ -57,3 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+# Typescript
+examples/**/*.js
+lib/**/*.js
+test/**/*.js
