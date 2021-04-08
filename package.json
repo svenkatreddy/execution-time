@@ -26,7 +26,7 @@
   "homepage": "https://github.com/svenkatreddy/execution-time#readme",
   "devDependencies": {
     "mocha": "^7.0.1",
-    "sinon": "^8.1.1",
+    "sinon": "^10.0.1",
     "ultimate-chai": "^4.1.1"
   },
   "dependencies": {
